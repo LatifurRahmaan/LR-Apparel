@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR Apparel - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    
+    <!-- Cart Section -->
+<section class="cart-section">
+    <div id="cart-items">
+        <!-- Cart items will be displayed here by JavaScript -->
+    </div>
+    <div id="cart-total">
+        <h3>Total: $<span id="total-amount">0.00</span></h3>
+    </div>
+    <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+    <button id="order-button" onclick="placeOrder()">Order</button> <!-- Order Button -->
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Admin Login Section -->
+        <section class="admin-login">
+            <button id="admin-login-btn">Admin Login</button>
+        </section>
+        <script>
+            document.getElementById('admin-login-btn').addEventListener('click', function () {
+                const username = prompt('Enter Admin Username:');
+                const password = prompt('Enter Admin Password:');
+        
+                if (username === 'latifur' && password === '1234') {
+                    window.location.href = 'admin.html'; // Redirect to admin page
+                } else {
+                    alert('Invalid credentials! Access denied.');
+                }
+            });
+        </script>
+        <p>&copy; 2024 LR Apparel. All Rights Reserved.</p>  
+    </footer>
+
+</body>
+</html>

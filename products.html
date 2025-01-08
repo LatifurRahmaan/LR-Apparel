@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LR Apparel - Products</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- JavaScript for Add to Cart -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Products</h1>
+    </header>
+
+    <!-- Navigation Bar with Dropdown -->
+    <nav>
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="products.html" class="dropbtn">Products</a>
+            <div class="dropdown-content">
+                <a href="#shirt">Shirt</a>
+                <a href="#panjabi">Panjabi</a>
+            </div>
+        </div>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a> <!-- Cart Count -->
+    </nav>
+
+
+    <!-- Shirt's Section -->
+    <section id="men" class="products-section">
+        <h2>Men's Shirt</h2>
+        <div class="products">
+            <div class="product" data-name="Men's Shirt-1" data-price="1000">
+                <img src="./images/Hueman 1.jpeg" alt="Men's Shirt">
+                <h3>Men's Shirt-01</h3>
+                <p>1000taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Men's Shirt-2" data-price="1000">
+                <img src="./images/Elevate01.jpg" alt="Men's Shirt-02">
+                <h3>Men's Shirt-02</h3>
+                <p>1000taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Men's Shirt-3" data-price="1000">
+                <img src="./images/Hueman 2.jpeg" alt="Men's Shirt-03">
+                <h3>Men's Shirt-03</h3>
+                <p>1000taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panjabi's Section -->
+    <section id="panjabi" class="products-section">
+        <h2>Men's Panjabi</h2>
+        <div class="products">
+            <div class="product" data-name="Men's Panjabi-1" data-price="1500">
+                <img src="./images/watchmuesum3.jpg" alt="Men's Panjabi-1">
+                <h3>Men's Panjabi-1</h3>
+                <p>1500taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Men's Panjabi-2" data-price="1500">
+                <img src="./images/Watchmueseum1.jpeg" alt="Men's Panjabi-2">
+                <h3>Men's Panjabi-2</h3>
+                <p>1500taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+            <div class="product" data-name="Men's Panjabi-3" data-price="1500">
+                <img src="./images/watchmuesum4.jpg" alt="Men's Panjabi-3">
+                <h3>Men's Panjabi-3</h3>
+                <p>1500taka</p>
+                <button onclick="addToCart(this)">Add to Cart</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Admin Login Section -->
+        <section class="admin-login">
+            <button id="admin-login-btn">Admin Login</button>
+        </section>
+        <script>
+            document.getElementById('admin-login-btn').addEventListener('click', function () {
+                const username = prompt('Enter Admin Username:');
+                const password = prompt('Enter Admin Password:');
+        
+                if (username === 'latifur' && password === '1234') {
+                    window.location.href = 'admin.html'; // Redirect to admin page
+                } else {
+                    alert('Invalid credentials! Access denied.');
+                }
+            });
+        </script>
+        <p>&copy; 2024 LR Apparel. All Rights Reserved.</p>  
+    </footer>
+
+</body>
+</html>
