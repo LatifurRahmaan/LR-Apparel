@@ -10,10 +10,15 @@ html {
     font-family: Arial, sans-serif;
 }
 
+/* Apply Helvetica as the default font */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Helvetica';
+    line-height: 1.6;
+    color: #333; /* Default text color */
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Header styles */
 header {
@@ -21,6 +26,7 @@ header {
     color: white;
     padding: 15px 0;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 /* Logo Animation */
@@ -158,35 +164,49 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Featured Section */
-.featured {
-    text-align: center;
-    padding: 40px;
-    background-color: #f4f4f4;
-}
-
-.featured img {
-    width: 400px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
+/* Carousel Section */
 .carousel {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 20px auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
     display: none;
-    width: 100%;
-    animation: fadeIn 1s ease;
 }
-
 .carousel-item.active {
     display: block;
 }
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+.carousel-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.carousel-navigation button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.carousel-navigation button:hover {
+    background-color: #555;
+}
+
 
 /* Product Listings */
 .products {
